@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interpreted Pattern</title>
+</head>
+
+<body ng-app="interpreterApp">
+<h1 align="center">Interpreted Pattern</h1>
+<div ng-controller="interpreterController">
+    <p id="p1" ng-model="p1" ng-show="p1">{{p1}}</p>
+    <form id="display">
+
+        <table>
+            <tr>
+                <td>
+                    <select id="inputItem" ng-model="inputItem" name="inputItem">
+                        <option value="Decimal" selected="selected">decimal</option>
+                        <option value="Hexadecimal">hexadecimal</option>
+                        <option value="Binary">binary</option>
+                        <option value="String">String</option>
+                    </select>
+                </td>
+                <td ></td>
+                <td ></td>
+                <td>
+                    <select id="outputItem" name="outputItem" ng-model="outputItem">
+                        <option value="Decimal">decimal</option>
+                        <option value="Hexadecimal">hexadecimal</option>
+                        <option value="Binary" selected="selected">binary</option>
+                        <option value="String">String</option>
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+                <td><button ng-click="convert()">Convert</button></td>
+            </tr>
+            <tr>
+
+                <td>
+                    <textarea  ng-model="input" rows="4" cols="30" style="resize: none"></textarea>
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                    <textarea id="output" name="output" ng-model="output" rows="4" cols="30" style="resize: none"></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="angular/convert.js"></script>
+</body>
+</html>
