@@ -14,6 +14,8 @@ public class ConvertController {
 
     @RequestMapping(path="/decimalToBinary",method = RequestMethod.POST)
     public ResponseEntity<String> decimalToBinary(@RequestBody Model model){
+        System.out.println("");
+        System.out.println("");
         try {
             result = Integer.toBinaryString(Integer.parseInt(model.getInput()));
         }catch (NumberFormatException nfe){
